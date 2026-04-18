@@ -1,0 +1,243 @@
+{
+    "scenes": [
+        {
+            "id": 0,
+            "layers": [
+                { "name": "QR_COVER", "image": "images1/S1.4.png", "position": [0.5, 0.5, 0], "rotation": [0, 0, 3.1416] },
+                { "name": "BACKGROUND", "image": "images1/s1.3.png", "position": [0.5, 0.0, -0.52], "rotation": [1.5708, 0, 3.1416] },
+                { "name": "BACKGROUND", "image": "images1/s1.2.png", "position": [0.5, 0.0, -0.51], "rotation": [1.5708, 0, 3.1416] },
+                { "name": "CHARACTER", "image": "images1/s1.1.png", "position": [0.5, 0.5, -0.5], "rotation": [1.5708, 0, 3.1416] }
+            ],
+            "states": [
+                {
+                    "id": 0,
+                    "prompt": "It is 6 am, the first day of your holiday. With nothing planned, you see an ad for an isolated beach. The idea sounds perfect.",
+                    "choices": [
+                        { "text": "Get ready for your beach day. (You pack your swimsuit, sunblock, towel, sunglasses, and a book.)", "next_state": 1 },
+                        { "text": "Reconsider; maybe a 6 am beach day is too risky. (You pause, thinking it might be too cold or empty.)", "next_state": 2 }
+                    ]
+                },
+                { "id": 1, "prompt": "Transition...", "next_scene": "1", "choices": [] },
+                { "id": 2, "prompt": "Transition...", "next_scene": "2", "choices": [] }
+            ]
+        },
+        {
+            "id": 1,
+            "layers": [
+                { "name": "QR_COVER", "image": "images1/s3.4.png", "position": [0.5, 0.5, 0], "rotation": [0, 0, 3.1416] },
+                { "name": "BACKGROUND", "image": "images1/s3.3.png", "position": [0.5, 0.0, -0.52], "rotation": [1.5708, 0, 3.1416] },
+                { "name": "BACKGROUND", "image": "images1/s3.2.png", "position": [0.5, 0.0, -0.51], "rotation": [1.5708, 0, 3.1416] },
+                { "name": "CHARACTER", "image": "images1/s3.1.png", "position": [0.5, 0.5, -0.5], "rotation": [1.5708, 0, 3.1416] }
+            ],
+            "states": [
+                {
+                    "id": 0,
+                    "prompt": "You leave the house lively with excitement.",
+                    "choices": [
+                        { "text": "Call an Uber.", "next_state": 1 },
+                        { "text": "Take the bus.", "next_state": 2 }
+                    ]
+                },
+                { "id": 1, "prompt": "Transition...", "next_scene": "3", "choices": [] },
+                { "id": 2, "prompt": "Transition...", "next_scene": "4", "choices": [] }
+            ]
+        },
+        {
+            "id": 2,
+            "layers": [
+                { "name": "QR_COVER", "image": "images1/s2.3.png", "position": [0.5, 0.5, 0], "rotation": [0, 0, 3.1416] },
+                { "name": "BACKGROUND", "image": "images1/s2.2.png", "position": [0.5, 0.0, -0.51], "rotation": [1.5708, 0, 3.1416] },
+                { "name": "CHARACTER", "image": "images1/s2.1.png", "position": [0.5, 0.5, -0.5], "rotation": [1.5708, 0, 3.1416] }
+            ],
+            "states": [
+                {
+                    "id": 0,
+                    "prompt": "You decide against the spontaneous trip.",
+                    "choices": [
+                        { "text": "Change your mind and go anyway.", "next_state": 1 },
+                        { "text": "Give up on the beach and stay home watching a movie.", "next_state": 2 }
+                    ]
+                },
+                { "id": 1, "prompt": "Transition...", "next_scene": "1", "choices": [] },
+                { "id": 2, "prompt": "Transition...", "next_scene": "11", "choices": [] }
+            ]
+        },
+        {
+            "id": 3,
+            "layers": [
+                { "name": "QR_COVER", "image": "images1/s4.4.png", "position": [0.5, 0.5, 0], "rotation": [0, 0, 3.1416] },
+                { "name": "BACKGROUND", "image": "images1/s4.3.png", "position": [0.5, 0.0, -0.52], "rotation": [1.5708, 0, 3.1416] },
+                { "name": "BACKGROUND", "image": "images1/s4.2.png", "position": [0.5, 0.0, -0.51], "rotation": [1.5708, 0, 3.1416] },
+                { "name": "CAR", "image": "images1/s4.1.png", "position": [0.5, 0.5, -0.5], "rotation": [1.5708, 0, 3.1416] }
+            ],
+            "states": [
+                {
+                    "id": 0,
+                    "prompt": "The Uber arrives. The car is dirty, and the driver is careless, speeding and ignoring signs.",
+                    "choices": [
+                        { "text": "Ask him to slow down.", "next_state": 1 },
+                        { "text": "Ignore it, hoping to arrive as fast as possible.", "next_state": 2 }
+                    ]
+                },
+                { "id": 1, "prompt": "Transition...", "next_scene": "5", "choices": [] },
+                { "id": 2, "prompt": "Transition...", "next_scene": "6", "choices": [] }
+            ]
+        },
+        {
+            "id": 4,
+            "layers": [
+                { "name": "QR_COVER", "image": "images1/s5.4.png", "position": [0.5, 0.5, 0], "rotation": [0, 0, 3.1416] },
+                { "name": "BACKGROUND", "image": "images1/s5.3.png", "position": [0.5, 0.0, -0.52], "rotation": [1.5708, 0, 3.1416] },
+                { "name": "BACKGROUND", "image": "images1/s5.2.png", "position": [0.5, 0.0, -0.51], "rotation": [1.5708, 0, 3.1416] },
+                { "name": "BUS", "image": "images1/s5.1.png", "position": [0.5, 0.5, -0.5], "rotation": [1.5708, 0, 3.1416] }
+            ],
+            "states": [
+                {
+                    "id": 0,
+                    "prompt": "The bus is quiet and half empty. The ride is long but peaceful. You reach the beach by 9:15 am—calm, almost empty, and serene.",
+                    "choices": [
+                        { "text": "Walk along the shore before swimming.", "next_state": 1 },
+                        { "text": "Go straight into the water.", "next_state": 2 }
+                    ]
+                },
+                { "id": 1, "prompt": "Transition...", "next_scene": "7", "choices": [] },
+                { "id": 2, "prompt": "Transition...", "next_scene": "7", "choices": [] }
+            ]
+        },
+        {
+            "id": 5,
+            "layers": [
+                { "name": "QR_COVER", "image": "images1/s11.3.png", "position": [0.5, 0.5, 0], "rotation": [0, 0, 3.1416] },
+                { "name": "BACKGROUND", "image": "images1/s11.2.png", "position": [0.5, 0.0, -0.51], "rotation": [1.5708, 0, 3.1416] },
+                { "name": "CAR", "image": "images1/s11.1.png", "position": [0.5, 0.5, -0.5], "rotation": [1.5708, 0, 3.1416] }
+            ],
+            "states": [
+                {
+                    "id": 0,
+                    "prompt": "You ask the driver to be more cautious. He sighs but slows down. He then takes a 'shortcut' that is a maze of backroads and traffic. Your ride becomes longer than the bus route.",
+                    "choices": [
+                        { "text": "Confront him again.", "next_state": 1 },
+                        { "text": "Stay silent and hope for the best.", "next_state": 2 }
+                    ]
+                },
+                { "id": 1, "prompt": "Transition...", "next_scene": "8", "choices": [] },
+                { "id": 2, "prompt": "Transition...", "next_scene": "8", "choices": [] }
+            ]
+        },
+        {
+            "id": 6,
+            "layers": [
+                { "name": "QR_COVER", "image": "images1/s11.3.png", "position": [0.5, 0.5, 0], "rotation": [0, 0, 3.1416] },
+                { "name": "BACKGROUND", "image": "images1/s11.2.png", "position": [0.5, 0.0, -0.51], "rotation": [1.5708, 0, 3.1416] },
+                { "name": "CAR", "image": "images1/s11.1.png", "position": [0.5, 0.5, -0.5], "rotation": [1.5708, 0, 3.1416] }
+            ],
+            "states": [
+                {
+                    "id": 0,
+                    "prompt": "You ignore the red flags. The driver misses the correct exit and blames 'road closures.' Time slips away. Your excitement fades.",
+                    "choices": [
+                        { "text": "Ask him to follow the original GPS route.", "next_state": 1 },
+                        { "text": "Let him continue, just wanting to arrive.", "next_state": 2 }
+                    ]
+                },
+                { "id": 1, "prompt": "Transition...", "next_scene": "8", "choices": [] },
+                { "id": 2, "prompt": "Transition...", "next_scene": "8", "choices": [] }
+            ]
+        },
+        {
+            "id": 7,
+            "layers": [
+                { "name": "QR_COVER", "image": "images1/s6.4.png", "position": [0.5, 0.5, 0], "rotation": [0, 0, 3.1416] },
+                { "name": "BACKGROUND", "image": "images1/s6.3.png", "position": [0.5, 0.0, -0.52], "rotation": [1.5708, 0, 3.1416] },
+                { "name": "BACKGROUND", "image": "images1/s6.2.png", "position": [0.5, 0.0, -0.51], "rotation": [1.5708, 0, 3.1416] },
+                { "name": "CROWD", "image": "images1/s6.1.png", "position": [0.5, 0.5, -0.5], "rotation": [1.5708, 0, 3.1416] }
+            ],
+            "states": [
+                {
+                    "id": 0,
+                    "prompt": "You enjoy the calm morning. But by 10:30 am, families arrive, vendors shout, and children run everywhere. The beach transforms into chaos.",
+                    "choices": [
+                        { "text": "Try to find a quieter spot.", "next_state": 1 },
+                        { "text": "Stay where you are and tolerate the noise.", "next_state": 2 }
+                    ]
+                },
+                { "id": 1, "prompt": "Transition...", "next_scene": "9", "choices": [] },
+                { "id": 2, "prompt": "Transition...", "next_scene": "9", "choices": [] }
+            ]
+        },
+        {
+            "id": 8,
+            "layers": [
+                { "name": "QR_COVER", "image": "images1/s7.3.png", "position": [0.5, 0.5, 0], "rotation": [0, 0, 3.1416] },
+                { "name": "BACKGROUND", "image": "images1/s7.2.png", "position": [0.5, 0.0, -0.51], "rotation": [1.5708, 0, 3.1416] },
+                { "name": "CROWD", "image": "images1/s7.1.png", "position": [0.5, 0.5, -0.5], "rotation": [1.5708, 0, 3.1416] }
+            ],
+            "states": [
+                {
+                    "id": 0,
+                    "prompt": "After countless detours, you finally reach the beach at 12:00 pm. It is packed with umbrellas, loud music, and crowded water. Your peaceful beach dream is gone.",
+                    "choices": [
+                        { "text": "Accept the situation and find a spot.", "next_state": 1 },
+                        { "text": "Sit on the first empty sand patch you find.", "next_state": 2 }
+                    ]
+                },
+                { "id": 1, "prompt": "Transition...", "next_scene": "9", "choices": [] },
+                { "id": 2, "prompt": "Transition...", "next_scene": "9", "choices": [] }
+            ]
+        },
+        {
+            "id": 9,
+            "layers": [
+                { "name": "QR_COVER", "image": "images1/s8.3.png", "position": [0.5, 0.5, 0], "rotation": [0, 0, 3.1416] },
+                { "name": "BACKGROUND", "image": "images1/s8.2.png", "position": [0.5, 0.0, -0.51], "rotation": [1.5708, 0, 3.1416] },
+                { "name": "WAVES", "image": "images1/s8.1.png", "position": [0.5, 0.5, -0.5], "rotation": [1.5708, 0, 3.1416] }
+            ],
+            "states": [
+                {
+                    "id": 0,
+                    "prompt": "You settle on the sand, but the water is unusually high and rough. Lifeguards pace anxiously. A whistle blows, and a guard announces: 'Strong undercurrents today. Swimming is prohibited.'",
+                    "choices": [
+                        { "text": "Stay and wait to see if conditions improve.", "next_state": 1 },
+                        { "text": "Start packing your things.", "next_state": 2 }
+                    ]
+                },
+                { "id": 1, "prompt": "Transition...", "next_scene": "10", "choices": [] },
+                { "id": 2, "prompt": "Transition...", "next_scene": "10", "choices": [] }
+            ]
+        },
+        {
+            "id": 10,
+            "layers": [
+                { "name": "QR_COVER", "image": "images1/s9.3.png", "position": [0.5, 0.5, 0], "rotation": [0, 0, 3.1416] },
+                { "name": "BACKGROUND", "image": "images1/s9.2.png", "position": [0.5, 0.0, -0.51], "rotation": [1.5708, 0, 3.1416] },
+                { "name": "SKY", "image": "images1/s9.1.png", "position": [0.5, 0.5, -0.5], "rotation": [1.5708, 0, 3.1416] }
+            ],
+            "states": [
+                {
+                    "id": 0,
+                    "prompt": "Minutes turn into an hour. The sky dims, the wind picks up, and people start leaving. The beach, crowded earlier, is now oddly empty.",
+                    "choices": [
+                        { "text": "Head home.", "next_state": 1 },
+                        { "text": "Take one last look at the sea.", "next_state": 2 }
+                    ]
+                },
+                { "id": 1, "prompt": "Transition...", "next_scene": "11", "choices": [] },
+                { "id": 2, "prompt": "Transition...", "next_scene": "11", "choices": [] }
+            ]
+        },
+        {
+            "id": 11,
+            "layers": [
+                { "name": "BACKGROUND", "image": "images1/end1.2.jpeg", "position": [0.5, 0.0, -0.51], "rotation": [1.5708, 0, 3.1416] },
+                { "name": "CHARACTER", "image": "images1/end1.png", "position": [0.5, 0.5, -0.5], "rotation": [1.5708, 0, 3.1416] }
+            ],
+            "states": [
+                {
+                    "id": 0,
+                    "prompt": "You walk away from the beach, tired, sandy, and strangely reflective. Your spontaneous idea became a tangled path of delays, crowds, and unpredictable nature. Life does not always match the picture you see online.",
+                    "choices": []
+                }
+            ]
+        }
+    ]
+}

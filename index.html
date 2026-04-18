@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>3D Pop-up AR - Writing Edition</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css?v=20260418c" />
+
+    <script
+      src="https://docs.opencv.org/4.10.0/opencv.js"
+      type="text/javascript"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <script src="script.js?v=20260418c" defer></script>
+  </head>
+  <body>
+    <div id="status">Loading OpenCV...</div>
+
+    <div id="container">
+      <video
+        id="videoInput"
+        autoplay
+        playsinline
+        muted
+        style="display: none"
+      ></video>
+      <canvas id="canvasOutput"></canvas>
+      <canvas id="canvasThree"></canvas>
+    </div>
+
+    <div id="dialogue-ui">
+      <button id="back-arrow">◄ BACK</button>
+      <div id="dialogue-text"></div>
+      <div id="reveal-options-arrow">READ MORE ▼</div>
+      <div class="options-grid" id="options-grid"></div>
+    </div>
+
+    <div id="exercise-ui">
+      <span class="exercise-title">WRITING EXERCISE</span>
+      <div id="exercise-instruction"></div>
+      <div class="restart-container">
+        <button id="restart-btn" class="dialogue-btn">RESTART STORY</button>
+      </div>
+    </div>
+
+    <div id="word-tooltip"></div>
+  </body>
+</html>

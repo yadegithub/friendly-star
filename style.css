@@ -1,0 +1,241 @@
+:root {
+  --bg-color: #000;
+  --accent-color: #d99655;
+  --text-primary: #ffffff;
+  --ui-bg-dark: #2a2a2a;
+  --ui-bg-light: #3b3a3a;
+  --ui-border: #4a4a4a;
+  --font-main: "Jost", sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--bg-color);
+  font-family: var(--font-main);
+}
+
+#container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#videoInput {
+  display: none;
+}
+
+canvas {
+  position: absolute;
+}
+
+#status {
+  position: fixed;
+  top: 20px;
+  width: 100%;
+  text-align: center;
+  color: var(--accent-color);
+  z-index: 10;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* Dialogue & Exercise UI */
+#dialogue-ui,
+#exercise-ui {
+  position: fixed;
+  bottom: 5%;
+  left: 5%;
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  right: 0;
+  z-index: 100;
+  pointer-events: auto;
+  display: none;
+  background: var(--ui-bg-light);
+  border-radius: 40px;
+  padding: 25px 35px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--ui-border);
+}
+
+#exercise-ui {
+  background: var(--ui-bg-dark);
+  border: 2px solid var(--accent-color);
+  text-align: center;
+}
+
+#back-arrow {
+  color: var(--accent-color);
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 10px;
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: var(--font-main);
+  font-weight: 500;
+}
+
+#dialogue-text {
+  color: var(--text-primary);
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.two-lines {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+/* --- Interactive Glossary Styles --- */
+.difficult-word {
+  color: var(--accent-color);
+  /* border-bottom: 1px dashed var(--accent-color); <-- Deleted this line */
+  cursor: pointer;
+  font-weight: 500; /* Makes the word slightly bolder so it's still visible */
+  transition: all 0.2s ease;
+}
+
+.difficult-word:active,
+.difficult-word.active {
+  background: rgba(217, 150, 85, 0.2);
+  border-radius: 4px;
+}
+
+#word-tooltip {
+  position: fixed;
+  background: var(--ui-bg-dark);
+  border: 1px solid var(--accent-color);
+  color: var(--text-primary);
+  padding: 12px 18px;
+  border-radius: 15px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  max-width: 250px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+  z-index: 200;
+  pointer-events: none;
+  text-align: center;
+  font-family: var(--font-main);
+
+  /* Animation setup */
+  opacity: 0;
+  transform: translateY(10px) translateX(-50%);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  visibility: hidden;
+}
+
+#word-tooltip.visible {
+  opacity: 1;
+  transform: translateY(0) translateX(-50%);
+  visibility: visible;
+}
+#exercise-instruction {
+  color: var(--text-primary);
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.exercise-title {
+  color: var(--accent-color);
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.dialogue-btn {
+  background: var(--accent-color);
+  border: none;
+  color: #161210;
+  padding: 12px 20px;
+  font-size: 0.9rem;
+  font-family: var(--font-main);
+  font-weight: 500;
+  border-radius: 40px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.dialogue-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(217, 150, 85, 0.4);
+}
+
+.restart-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+#restart-btn {
+  min-width: 200px;
+}
+
+#reveal-options-arrow {
+  color: var(--accent-color);
+  font-size: 0.85rem;
+  text-align: center;
+  cursor: pointer;
+  display: none;
+  margin: 5px auto 0 auto;
+  animation: bounce 1.5s infinite;
+  background: rgba(217, 150, 85, 0.1);
+  padding: 6px 15px;
+  border-radius: 20px;
+  width: fit-content;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+@media (max-width: 500px) {
+  #dialogue-ui,
+  #exercise-ui {
+    bottom: 2%;
+    width: 85%;
+    padding: 20px;
+    border-radius: 30px;
+  }
+  .options-grid {
+    grid-template-columns: 1fr;
+  }
+  #dialogue-text {
+    font-size: 1.05rem;
+  }
+}
